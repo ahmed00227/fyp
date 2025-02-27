@@ -1,0 +1,61 @@
+
+.logo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+   
+}
+header{
+    display: flex;
+    margin-bottom: 100px
+   
+}
+#menus{
+    display: flex;
+    list-style: none;
+    padding: 20px;
+    align-items: center;
+    cursor: pointer; 
+    font-weight: 500;
+}
+#menus li a{
+    text-decoration: none;
+    padding-left: 40px;
+    color: rgb(255, 187, 0);
+}
+#menus a:hover{
+    color: burlywood;
+   
+}
+#menus button{
+   margin-top: 20px;
+}
+.hero {
+    background: url('/images/images.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    width: 100wh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    padding: 0;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.6); /* Black overlay with 20% opacity */
+    z-index: 0; /* Ensure the overlay is on top of the background */
+}
+  main h1{
+    color: rgb(255, 187, 0);
+    text-transform: uppercase;
+   margin-bottom: 10px;
+  }
+  
