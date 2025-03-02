@@ -17,11 +17,7 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -32,6 +28,14 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class,'user_id');
+    }
+    public function messages(){
+        return $this->hasMany(Message::class,'user_id');
+    }
 
     /**
      * Get the attributes that should be cast.
