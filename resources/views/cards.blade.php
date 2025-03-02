@@ -1,0 +1,2 @@
+@extends('welcome')
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorem qui tempora laborum doloribus voluptatibus, odit sapiente quibusdam reprehenderit laboriosam ex ipsum voluptates alias quod tempore repellat repellendus dolore. Aliquid.</p>

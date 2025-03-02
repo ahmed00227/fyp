@@ -1,3 +1,4 @@
+/* 
 
 .logo{
     display: flex;
@@ -5,11 +6,7 @@
     align-items: center;
    
 }
-header{
-    display: flex;
-    margin-bottom: 100px
-   
-}
+
 #menus{
     display: flex;
     list-style: none;
@@ -30,32 +27,302 @@ header{
 #menus button{
    margin-top: 20px;
 }
-.hero {
-    background: url('/images/images.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
+
+
+  /* main h1{
+    color: rgb(255, 187, 0);
+    text-transform: uppercase;
+   margin-bottom: 10px;
+   text-align: left;
+  }
+  .search-pro{
+    height:2rem;
+    padding:0.5rem;
+   width: 20%;
+   margin-bottom: 100px;
+   display: flex;
+   align-items: center; 
+   justify-content: center;  
+  }
+  
+ */ 
+ *{
+    margin: 0px;
+    padding: 0px;
+  
+}
+header{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   padding: 0;
+   margin-bottom: 0%;
+}
+
+.menus li{
+   
+    list-style: none;
+   float:left;
+    cursor: pointer;
+   
+    border: none; 
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    margin-top: 0px;
+   
+    
+ 
+}
+.menus li a{
+ 
+   color: darkblue;
+   text-decoration: none;
+   
+}
+.menus ul li a:hover{
+    color: rgb(131, 96, 7);
+    border-bottom: 1px solid darkblue;
+   
+  
+}
+#search{
+
+    padding: 1px;
+    border-color: none;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 5px;
+}
+.search-bar{
+  
+    display: flex;
+    align-items: center;
+  
+}
+.search-bar i{
+
+ margin-left: 20px;
+ font-size: larger;
+}
+.search-bar input{
+    border-style: none;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.283);
+    
+}
+.login-btn button{
+    background-color: rgb(18, 168, 227);
+    color: #fff;
+}
+.login-btn button:hover{
+    background-color: rgb(16, 89, 118);
+    color: #fff;
+}
+
+
+.logo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#home-cont{
+    background-color: lightblue;
+   position: fixed;
+   top: 0;
+   
+ width: 100%;
+z-index:1;
+}
+/* .hero {
+   
+} */
+ .section{
+    background: url('../images/cap.png') no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+    text-align: left;
     display: flex;
     width: 100wh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height:550px;
     padding: 0;
+    position: relative;
+ } 
+ 
+ 
+ .high-stan h1{
+    padding-top: 10px;
+  color:#fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.446);
+
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 0%;
+ }
+ .high-stan{
+margin-top: 0%;
+ }
+.high-stan h4{
+    color: rgb(9, 48, 53);
+  font-weight: 600;
+  margin-bottom: 50px;
 }
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 500px;
-    background: rgba(0, 0, 0, 0.6); /* Black overlay with 20% opacity */
-    z-index: 0; /* Ensure the overlay is on top of the background */
+.btn-warning{
+    color: wheat;
 }
-  main h1{
-    color: rgb(255, 187, 0);
+#sign-up:hover{
+background-color:rgb(192, 237, 243) ;
+color: #150101;
+}
+#shop-now{
+    background-color:rgb(9, 48, 53) ;
+    color: #fff;
+    
+}
+#shop-now:hover{
+    background-color:rgb(1, 21, 23) ;
+}
+ .service h2{
+    text-transform: capitalize;
+    color: rgb(61, 111, 127);
+   
+ }
+ .service i{
+    margin-top: 60px;
+    font-size: 80px;
+    margin-bottom: 30px;
+
+ }
+ .service{
+    text-align: center;
+    color: rgb(1, 21, 23);
+ }
+ .service p{
+    margin-bottom: 60px;
+    color: #150101;
+    margin-top: 20px;
+ }
+ .discount{
+    background: url('../images/discount.png') no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+    text-align:center;
+    display: flex;
+    width: 100wh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:550px;
+    padding: 0;
+    margin: auto;
+ }
+ .discount-content{
+   padding: 60px;
+    background-color: #150101db;
+ }
+ #disc-center{
+margin: auto;
+ }
+ .discount-content h1{
     text-transform: uppercase;
-   margin-bottom: 10px;
+    margin-bottom: 30px;
+ }
+ .discount-content button{
+   background-color: #c2b6b6;
+   color:#150101;
+ }
+ .discount-content button:hover{
+    background-color: #6e6363;
+    color:#fff;
   }
+  .card img{
+   width: 100%;
+   height: 400px;
+   
+   box-shadow:  8px 8px 15px rgba(0, 0, 0, 0.284);
+  display: block;
+  border:none;
   
+  }
+  .card-area{
+    padding-top: 70px;
+    background-image: linear-gradient(to bottom right, rgb(30, 80, 105)
+    , rgb(231, 231, 223));
+
+    padding-bottom: 70px;
+   
+  }
+ .overlay{
+    height: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background:linear-gradient(transparent,#1501016a 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.5s;
+    overflow: hidden;
+ }
+ .overlay h3{
+    margin-bottom: 40px;
+    font-size: 30px;
+text-transform: capitalize;
+color: #fff;
+text-shadow:2px 2px rgba(0, 0, 0, 0.446);
+
+ }
+ .overlay p{
+    color: #fff;
+ }
+ .card:hover img{
+    transform: scale(1.1);
+    opacity: 0.9;
+ }
+ .card:hover .overlay{
+    height: 100%;
+ }
+ .overlay button:hover{
+    background-color: #c2b6b6;
+ }
+ .overlay button{
+    text-transform: capitalize;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.157);
+ }
+ form{
+  border: 3px solid red;
+
+  background-color:rgba(204, 223, 222, 0.657);
+ }
+ .login-bg{
+   margin: auto;
+  /* width: 55%;
+   padding: 50px; */
+   text-align: center;
+   
+ }
+ .login-bg h2{
+   text-align: center;
+ }
+ .login{
+   background: url('../images/login-img.jpeg') no-repeat center center/cover;
+   color: rgb(255, 255, 255);
+   text-align: left;
+   display: flex;
+   width: 100wh;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 640px;
+   padding: 0;
+ }
+
+ 
+
