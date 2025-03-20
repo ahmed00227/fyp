@@ -46,6 +46,7 @@
   }
   
  */ 
+
  *{
     margin: 0px;
     padding: 0px;
@@ -88,6 +89,11 @@ header{
    
   
 }
+.search-sec{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 #search{
 
     padding: 1px;
@@ -104,10 +110,11 @@ header{
 }
 .search-bar i{
 
- margin-left: 20px;
+ margin-left: 10px;
  font-size: larger;
 }
 .search-bar input{
+   
     border-style: none;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.283);
     
@@ -296,11 +303,7 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
     text-transform: capitalize;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.157);
  }
- form{
-  border: 3px solid red;
-
-  background-color:rgba(204, 223, 222, 0.657);
- }
+ 
  .login-bg{
    margin: auto;
   /* width: 55%;
@@ -312,7 +315,7 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
    text-align: center;
  }
  .login{
-   background: url('../images/login-img.jpeg') no-repeat center center/cover;
+   
    color: rgb(255, 255, 255);
    text-align: left;
    display: flex;
@@ -324,5 +327,131 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
    padding: 0;
  }
 
+ .login-back{
+   background-color: rgba(4, 26, 43, 0.684);
+   padding: 55px;
+ }
+ .login-back h2{
+   color: white;
+   margin-bottom: 30px;
+ }
+ .login-back label{
+    margin-bottom: 10px;
+ }
+  .login-back input{
+    margin-bottom: 1px;
+    border-style: none;
+    width: 100%;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.186);
+    border-radius: 5px;
+   
+ }
+ input[type=text]{
+   padding: 5px;
+ }
+ input[type=password]{
+   padding: 5px;
+ }
+ .login-back input[type=submit]{
+   margin: auto;
+   width: 100%;
+   padding: 10px;
+   background-color: rgb(42, 157, 203);
+   color: #fff;
+   margin-top: 30px;
+   margin-bottom: 10px;
+   box-shadow: 2px 2px rgba(0, 0, 0, 0.186);
+}
+.login-back input[type=submit]:hover{
+
+   background-color: rgb(4, 91, 126);
+   color: #fff;
+}
+.login-back a{
+ 
+   color: rgb(136, 212, 236);
+   text-decoration: none;
+}
+.login-back p{
+   color: rgb(206, 217, 220);
+}
+.login-back a:hover{
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+ .login-pg{
+   background: url('../images/login2-picaai.png') no-repeat center center/cover;
+ }
+#email-error,#pass-error{
+   color:rgb(232, 38, 38);
+   margin-bottom: 10px;
+   font-size: smaller;
+   display: none;
+}
+@media (max-width:1198px){
+   .menus li{
+      padding: 4px;
+      margin-top: 5px;
+   }
+   #search{
+      padding-left: 2px;
+   }
+   .service h2{
+      font-size: 25px;
+   }
+}
+@media (max-width:990px){
+   .logo h2 span{
+      font-size: 30px;
+     }
+     .logo img{
+       height: 50px;
+       width: 50px;
+     }
+.menus{
+   display: flex;
+ 
+   justify-content: space-between;
+   align-items: center;
+ width: 100%;
+ margin-left: 20px;
+
+}
+header{
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+.menus li{
+ 
+   float: left;
+   margin: 2px;
+   padding:10px;
+   display: flex;
+   justify-content: center;
+}
+.high-stan h1 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+.high-stan h4{
+   text-align: center;
+}
+.header-btn{
+text-align: center;
+margin-bottom: 0%;
+} 
+}
+@media (max-width:768px){
+  
+  .logo h2 span{
+   font-size: 20px;
+  }
+  .logo img{
+    height: 50px;
+    width: 50px;
+  }
+
+
+}
  
 

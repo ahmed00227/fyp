@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home page</title>
     <link rel="stylesheet" href="css/bootstrap/CSS/bootstrap-4.0.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/styling.css">
     
@@ -80,12 +80,17 @@
                     </ul>
                 </nav>
             </div>
+            
+        <div class="search-sec">
             <div class="search-bar">
+          
                 <input type="text" id="search" placeholder="Search for products"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </div>
             <div class="login-btn">
             <button class="btn ">Login</button>
             </div>
+          
+        </div>
         </div>
 
       </header>
@@ -97,15 +102,17 @@
      
  <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-lg-8">
       
          <div class="high-stan">
             
          <h1>Welcome to our <span style="color:darkblue;">MEDI</span><span style="color:orange;">FAST</span></h1>
          <h4> The store aims to create a seamlessshopping experience  <br>for its customers, with high-quality products <br>and expert support readily available online.</h4>
          </div>
+         <div class="header-btn">
            <button class="btn " id="shop-now">Shop Now</button>
            <button class="btn " id="sign-up">Sign up</button>
+           </div>
         </div>
     </div>
  </div>
