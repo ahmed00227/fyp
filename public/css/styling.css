@@ -526,6 +526,93 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
    height: 55px;
    
 }
+                       /* .....about.....*/
+
+ .about{
+   background-image: linear-gradient(to bottom right, rgb(119, 196, 235)
+   , rgb(231, 231, 223));
+ }                      
+.about_sec{
+   margin-top: 150px;
+}
+.about_sec h1{
+text-align: center;
+margin-bottom: 20px;
+color: #296e7b;
+text-transform: capitalize;
+text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.63);
+}
+.about_sec p{
+   font-size: 1.2rem;
+   line-height: 2rem;
+}
+.about_sec b{
+   color: #296e7b;
+   font-weight: 300;
+}
+.about_sec img{
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+}
+.trust_us h1{
+   text-transform: capitalize;
+   text-align: center;
+   margin-top: 40px;
+   color: #296e7b;
+   text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.835);
+   
+}
+.about_trust i{
+ font-size: 3rem;
+ margin-top: 20px;
+ margin-bottom: 10px;
+ text-shadow:  6px 6px 15px rgba(29, 26, 26, 0.284);
+ 
+}
+.about_trust h3{
+   font-size: 1.3rem;
+color: #296e7b;
+   
+  }
+  .about_trust p{
+   font-size: 1.1rem;
+  }
+.about_trust{
+   text-align: center;
+   border: none;
+  
+   margin: auto;
+   height: 220px;
+padding: 30px;
+}
+
+.commitment {
+   margin-top: 40px;
+  
+}
+.commitment b{
+   color:#296e7b;
+   font-weight: 300;
+}
+.commitment span{
+   font-size: 1.1rem;
+   line-height: 2rem;
+}
+.commitment i{
+   font-size: 1.5rem;
+   margin-right: 10px;
+}
+.commitment h1{
+   text-align: center;
+   text-transform: capitalize;
+   margin-bottom: 40px;
+   color: #296e7b;
+   text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.835);
+}
+.commitment img{
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+   margin-bottom: 20px;
+}
+
 
                    /*......... media queries........... */
 
