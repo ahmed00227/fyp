@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MessageRequest;
 use App\Models\Chat;
 use Illuminate\Http\Request;
+use Symfony\Component\Mailer\Event\MessageEvent;
 
 class DoctorController extends Controller
 {
@@ -13,8 +15,18 @@ class DoctorController extends Controller
         })->get();
         return view('doctor.index',compact('chats'));
     }
-    public function show($id){
+    public function chat($id){
         $chat= Chat::findOrFail($id);
-        return view('doctor.show',compact('chat'));
+        return view('doctor.chat',compact('chat'));
+    }
+    public function messageSend(MessageRequest $request,$chatId)
+    {
+        $chat=Chat::find($chatId);
+        $message=$chat->messages()->create([
+            'user_id' => auth()->id(),
+            'message' => $request->message
+        ]);
+        event(new \App\Events\Chat($chatId,$message,auth()->user()));
+        return response()->json(['success' => true,'message' => $message]);
     }
 }
