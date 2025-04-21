@@ -1,10 +1,10 @@
-/* 
+/*
 
 .logo{
     display: flex;
     justify-content: left;
     align-items: center;
-   
+
 }
 
 #menus{
@@ -12,7 +12,7 @@
     list-style: none;
     padding: 20px;
     align-items: center;
-    cursor: pointer; 
+    cursor: pointer;
     font-weight: 500;
 }
 #menus li a{
@@ -22,7 +22,7 @@
 }
 #menus a:hover{
     color: burlywood;
-   
+
 }
 #menus button{
    margin-top: 20px;
@@ -41,19 +41,19 @@
    width: 20%;
    margin-bottom: 100px;
    display: flex;
-   align-items: center; 
-   justify-content: center;  
+   align-items: center;
+   justify-content: center;
   }
-  
- */ 
+
+ */
 
  *{
     margin: 0px;
     padding: 0px;
-  
+
 }
 header{
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -65,33 +65,33 @@ header{
 }
 
 .menus li{
-   
+
     list-style: none;
    float:left;
     cursor: pointer;
-   
-    border: none; 
+
+    border: none;
     padding: 12px;
     display: flex;
     /* align-items: center; */
    padding-right: 50px;
     margin-top: 0px;
     padding-top: 0%;
-   
-    
- 
+
+
+
 }
 .menus li a{
- 
+
    color: darkblue;
    text-decoration: none;
-   
+
 }
 .menus ul li a:hover{
     color: rgb(131, 96, 7);
     border-bottom: 1px solid darkblue;
-   
-  
+
+
 }
 .search-sec{
    display: flex;
@@ -106,14 +106,14 @@ header{
     border-radius: 5px;
     width:190%;
     padding-left: 10px;
-  
+
 }
 /* .search-bar{
-  
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
+
 } */
 .login-btn i{
 
@@ -121,10 +121,10 @@ header{
  font-size: larger;
 }
 .search-bar input{
-  
+
     border-style: none;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.283);
-    
+
 }
 
 .login-btn button{
@@ -149,12 +149,12 @@ header{
     , rgb(178, 239, 251));
    position: fixed;
    top: 0;
-   
+
  width: 100%;
 z-index:1;
 }
 /* .hero {
-   
+
 } */
  .section{
     background: url('../images/cap.png') no-repeat center center/cover;
@@ -168,9 +168,9 @@ z-index:1;
     height:550px;
     padding: 0;
     position: relative;
- } 
- 
- 
+ }
+
+
  .high-stan h1{
     padding-top: 10px;
   color:#fff;
@@ -198,31 +198,31 @@ color: #150101;
 #shop-now{
     background-color:rgb(9, 48, 53) ;
     color: #fff;
-    
+
 }
 #shop-now:hover{
     background-color:rgb(1, 21, 23) ;
 }
- .service h2{
-    text-transform: capitalize;
-    color: rgb(61, 111, 127);
-   
- }
- .service i{
-    margin-top: 60px;
-    font-size: 80px;
-    margin-bottom: 30px;
+     .service h2{
+        text-transform: capitalize;
+        color: rgb(61, 111, 127);
 
- }
- .service{
-    text-align: center;
-    color: rgb(1, 21, 23);
- }
- .service p{
-    margin-bottom: 60px;
-    color: #150101;
-    margin-top: 20px;
- }
+     }
+     .service i{
+        margin-top: 60px;
+        font-size: 80px;
+        margin-bottom: 30px;
+
+     }
+     .service{
+        text-align: center;
+        color: rgb(1, 21, 23);
+     }
+     .service p{
+        margin-bottom: 60px;
+        color: #150101;
+        margin-top: 20px;
+     }
  .discount{
     background: url('../images/discount.png') no-repeat center center/cover;
     color: rgb(255, 255, 255);
@@ -258,11 +258,11 @@ margin: auto;
   .card img{
    width: 100%;
    height: 400px;
-   
+
    box-shadow:  8px 8px 15px rgba(0, 0, 0, 0.284);
   display: block;
   border:none;
-  
+
   }
   .card-area{
     padding-top: 70px;
@@ -270,7 +270,7 @@ margin: auto;
     , rgb(231, 231, 223));
 
     padding-bottom: 70px;
-   
+
   }
  .overlay{
     height: 0;
@@ -314,19 +314,19 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
     text-transform: capitalize;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.157);
  }
- 
+
  .login-bg{
    margin: auto;
   /* width: 55%;
    padding: 50px; */
    text-align: center;
-   
+
  }
  .login-bg h2{
    text-align: center;
  }
  .login{
-   
+
    color: rgb(255, 255, 255);
    text-align: left;
    display: flex;
@@ -355,7 +355,7 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
     width: 100%;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.186);
     border-radius: 5px;
-   
+
  }
  input[type=text]{
    padding: 5px;
@@ -379,7 +379,7 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
    color: #fff;
 }
 .login-back a{
- 
+
    color: rgb(136, 212, 236);
    text-decoration: none;
 }
@@ -405,7 +405,7 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
 .chatbot{
    background: url('../images/chatbot_enhanced.jpg') no-repeat center center/cover;
    min-height: 100vh;
-  
+
 }
 .chatbot-head{
    margin-top: 200px;
@@ -442,7 +442,7 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
 .chatbox{
    background-image: linear-gradient(to bottom right, rgb(255, 255, 255)
     , rgb(211, 182, 227));
-   bottom: 10px; 
+   bottom: 10px;
    position: fixed;
    right: 30%;
    border-radius: 20px;
@@ -524,12 +524,99 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
    cursor: pointer;
    line-height: 55px;
    height: 55px;
-   
+
 }
+                       /* .....about.....*/
+
+ .about{
+   background-image: linear-gradient(to bottom right, rgb(119, 196, 235)
+   , rgb(231, 231, 223));
+ }
+.about_sec{
+   margin-top: 150px;
+}
+.about_sec h1{
+text-align: center;
+margin-bottom: 20px;
+color: #296e7b;
+text-transform: capitalize;
+text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.63);
+}
+.about_sec p{
+   font-size: 1.2rem;
+   line-height: 2rem;
+}
+.about_sec b{
+   color: #296e7b;
+   font-weight: 300;
+}
+.about_sec img{
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+}
+.trust_us h1{
+   text-transform: capitalize;
+   text-align: center;
+   margin-top: 40px;
+   color: #296e7b;
+   text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.835);
+
+}
+.about_trust i{
+ font-size: 3rem;
+ margin-top: 20px;
+ margin-bottom: 10px;
+ text-shadow:  6px 6px 15px rgba(29, 26, 26, 0.284);
+
+}
+.about_trust h3{
+   font-size: 1.3rem;
+color: #296e7b;
+
+  }
+  .about_trust p{
+   font-size: 1.1rem;
+  }
+.about_trust{
+   text-align: center;
+   border: none;
+
+   margin: auto;
+   height: 220px;
+padding: 30px;
+}
+
+.commitment {
+   margin-top: 40px;
+
+}
+.commitment b{
+   color:#296e7b;
+   font-weight: 300;
+}
+.commitment span{
+   font-size: 1.1rem;
+   line-height: 2rem;
+}
+.commitment i{
+   font-size: 1.5rem;
+   margin-right: 10px;
+}
+.commitment h1{
+   text-align: center;
+   text-transform: capitalize;
+   margin-bottom: 40px;
+   color: #296e7b;
+   text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.835);
+}
+.commitment img{
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+   margin-bottom: 20px;
+}
+
 
                    /*......... media queries........... */
 
-                            
+
 
 @media (max-width:1198px){
    .menus li{
@@ -565,7 +652,7 @@ justify-content: center;
 
 .menus{
    display: flex;
- 
+
    justify-content: center;
    align-items: center;
  width: 100%;
@@ -577,7 +664,7 @@ header{
  padding-bottom: 10px;
 }
 /* .menus li{
- 
+
    float: left;
    margin: 2px;
    padding:10px;
@@ -595,7 +682,7 @@ header{
 .header-btn{
 text-align: center;
 margin-bottom: 0%;
-} 
+}
 .card{
    margin-bottom: 30px;
 }
@@ -605,11 +692,11 @@ margin-bottom: 0%;
 }
 .service p{
    margin-bottom: 10px;
-   
+
 }
 }
 @media (max-width:768px){
-  
+
   .logo h2 span{
    font-size: 20px;
   }
@@ -635,7 +722,7 @@ margin-left: 0%
    display: flex;
    align-items: center;
    justify-content: space-between;
-  
+
   }
   header{
    padding-top: 0%;
@@ -675,9 +762,9 @@ margin-left: 0%
    .chatbox-body{
       height: 90%;
    } */
-   
 
-  
+
+
 }
 
 

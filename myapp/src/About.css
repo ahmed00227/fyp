@@ -1,0 +1,111 @@
+.gh{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.zx{
+    margin: 0;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 1000;
+    color: rgb(6, 6, 147);
+
+}
+.y{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Tapestry', 'Cinzel', serif;
+    
+     
+}
+.p{
+    padding: 20px;
+    margin-left: 50px;
+    font-size: 30px;
+    color: blue;
+}
+.a{
+    margin-left: 70px;
+    margin-top: -20px;
+    font-size: 20px;
+}
+.b{
+    float: right;
+    margin-right: 180px;
+    font-size: 30px;
+    color: blue;
+    padding: 20px;
+}
+.c{
+    float: right;
+    margin-left: 700px;
+    margin-top: -20px;
+    font-size: 20px;
+}
+.d{
+   color: blue;
+   float: left;
+   font-size: 30px;
+   margin-left: 50px;
+   padding: 20px;
+}
+.e{
+    font-size: 20px;
+    margin-left: 70px;
+    margin-top: 790px;
+
+}
+.f{
+    font-size: 20px;
+    margin-left: 70px;
+
+
+}
+/* Hero Section */
+.hero-section {
+    /*background-image: url('./aboutus.jpg');*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    object-fit: cover;
+    padding-top: 60px;
+}
+
+/* Typography & Layout */
+.section-title {
+    font-size: 2rem;
+    margin-top: 40px;
+    font-weight: 700;
+    color: #1f3c88;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin-top: 20px;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 40vh;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+}
+
