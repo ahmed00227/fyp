@@ -2,8 +2,15 @@ import Navbar from "./Navbar";
 import React from 'react';
 import Footer from "./Footer";
 import {Link} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
 
 const SpecialistChat = () => {
+    const navigate = useNavigate();
+
+    const handleStartChat = (specialistName) => {
+        navigate('./ChatCanvas', { state: { specialistName } });
+    };
     const doctors = [
         {
             title: 'Heart Specialist',
@@ -57,8 +64,12 @@ const SpecialistChat = () => {
                                         <h5 className="card-title fw-bold">{doctor.title}</h5>
                                         <p className="card-text">{doctor.description}</p>
                                     </div>
-                                    <Link to='/Chat' className="text-white btn ms-0  mt-3 align-self-start text-capitalize"
-                                          style={{background: '#063444'}}>
+                                    <Link
+                                        to="/Chat"
+                                        state={{ specialistName: doctor.title }} // ✅ this passes the data
+                                        className="text-white btn ms-0 mt-3 align-self-start text-capitalize"
+                                        style={{ background: '#063444' }}
+                                    >
                                         {doctor.buttonText} <i className="fa-solid fa-arrow-right ms-2"></i>
                                     </Link>
                                 </div>

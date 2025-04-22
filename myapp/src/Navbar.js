@@ -55,6 +55,9 @@ const Home = () => {
                   <li className="nav-item">
                     <Link className="nav-link" to="/Whole">PRODUCTS</Link>
                   </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/MyOrder">ORDERS</Link>
+                    </li>
                 </ul>
 
                 <ul className="navbar-nav d-flex align-items-center col-md-3 col-12 justify-content-end">

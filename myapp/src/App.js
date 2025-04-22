@@ -15,9 +15,11 @@ import Newlogin from './Newlogin';
 import SpecialistChat from './SpecialistChat';
 import Chat from './Chat'
 import CartView from "./CartView";
+import MyOrder from "./MyOrder"
 import UserCartComponent from './components/UserCartComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 import Logout from './Logout';
 function App() {
@@ -41,7 +43,8 @@ function App() {
       <Route path="/Checkout" element={<Checkout />} />
       <Route path="/SpecialistChat" element={<SpecialistChat />}  />
       <Route path="/Chat" element={<Chat />}  />
-        <Route path="/cart" element={<CartView/>}  />
+      <Route path="/cart" element={<CartView/>}  />
+      <Route path="/MyOrder" element={<MyOrder/>}  />
     </Routes>
     </BrowserRouter>
 
