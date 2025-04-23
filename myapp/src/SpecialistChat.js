@@ -8,45 +8,51 @@ import { useNavigate } from 'react-router-dom';
 const SpecialistChat = () => {
     const navigate = useNavigate();
 
-    const handleStartChat = (specialistName) => {
-        navigate('./ChatCanvas', { state: { specialistName } });
+    const handleStartChat = (specialistName , specialistRoute) => {
+        navigate('./ChatCanvas', { state: { specialistName , specialistRoute } });
     };
     const doctors = [
         {
             title: 'Heart Specialist',
             description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
             buttonText: 'Start a Chat',
-            image: 'heartspecilist.jpg'
+            image: 'heartspecilist.jpg',
+            value: 'Cardiologist'
         },
         {
             title: 'Dental Specialist',
             description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
             buttonText: 'Start a Chat',
-            image: 'dentist-specialist.jpg'
+            image: 'dentist-specialist.jpg',
+            value: 'Dentist'
         },
         {
             title: 'Kidney Specialist',
             description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
             buttonText: 'Start a Chat',
-            image: 'kidneyspecialist.jpg'
+            image: 'kidneyspecialist.jpg',
+            value: 'Nephrologist'
         },
         {
             title: 'Medical Specialist',
             description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
             buttonText: 'Start a Chat',
-            image: 'medicalspecialist.jpg'
+            image: 'medicalspecialist.jpg',
+            value: 'General Physician'
         },
         {
             title: 'Skin Specialist',
             description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
             buttonText: 'Start a Chat',
-            image: 'skinspecialist.jpg'
+            image: 'skinspecialist.jpg',
+            value: 'Dermatologist'
         },
         {
             title: 'Child Specialist',
             description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
             buttonText: 'Start a Chat',
-            image: 'childspecialist.jpg'
+            image: 'childspecialist.jpg',
+            value: 'Cardiologist'
         }
     ];
 
@@ -66,7 +72,7 @@ const SpecialistChat = () => {
                                     </div>
                                     <Link
                                         to="/Chat"
-                                        state={{ specialistName: doctor.title }} // ✅ this passes the data
+                                        state={{ specialistName: doctor.title , specialistRoute: doctor.value }} // ✅ this passes the data
                                         className="text-white btn ms-0 mt-3 align-self-start text-capitalize"
                                         style={{ background: '#063444' }}
                                     >

@@ -38,7 +38,7 @@ class ChatController extends Controller
             'messages' => $messages
         ]);
     }
-    public function messageSend(MessageRequest $request)
+    public function messageSend(Request $request)
     {
         $chat = Chat::find($request->chat_id);
         $message = $chat->messages()->create([
