@@ -26,5 +26,5 @@ Route::middleware('auth:sanctum')->group(function () {
    Route::get('/orders',[UserController::class,'orders'])->name('orders');
    Route::post('/logout',[UserController::class,'logout'])->name('logout');
    Route::post('/recommendations',[ChatBotController::class,'recommendations'])->name('recommendations');
-   Route::get('/descriptions',[ChatBotController::class,'descriptions'])->name('descriptions');
+   Route::post('/descriptions',[ChatBotController::class,'descriptions'])->name('descriptions');
 });
