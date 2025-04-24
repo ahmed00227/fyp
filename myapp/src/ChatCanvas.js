@@ -47,7 +47,7 @@ const ChatCanvas = () => {
 
             const data = await response.json();
             localStorage.setItem('chatId', data.chat.id);
-            setMessages(data.messages && data.messages.length > 0 ? data.messages : '');
+            // setMessages(data.messages && data.messages.length > 0 ? data.messages : '');
 
             setMessages(data.messages || []); // Use correct response key
 
@@ -67,15 +67,7 @@ const ChatCanvas = () => {
 
     const handleSend = async () => {
         if (!message.trim()) return;
-
-        const sentMessage = {
-            text: message,
-            sentByMe: true,
-            timestamp: new Date(),
-        };
-
-        // Optimistically update UI
-        setMessages((prev) => [...prev, sentMessage]);
+        
         setNewMessage('');
         scrollToBottom();
 
@@ -129,14 +121,14 @@ const ChatCanvas = () => {
             {/* Messages */}
             <div className="flex-grow-1 p-3 overflow-auto" style={{ backgroundColor: '#f1f2f6' }}>
                 {messages.map((msg, i) => (
-                    <div key={i} className={`mb-2 ${msg.sentByMe ? 'text-end' : 'text-start'}`}>
+                    <div key={i} className={`mb-2 ${msg.user_id==localStorage.getItem('userId') ? 'text-end' : 'text-start'}`}>
                         <div
                             className={`d-inline-block px-3 py-2 rounded-3 shadow-sm ${
-                                msg.sentByMe ? 'bg-primary text-white' : 'bg-light'
+                                msg.user_id==localStorage.getItem('userId') ? 'bg-primary text-white' : 'bg-light'
                             }`}
                             style={{ maxWidth: '60%' }}
                         >
-                            <small>{msg.text}</small>
+                            <small>{msg.message}</small>
                         </div>
                     </div>
                 ))}
