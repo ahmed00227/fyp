@@ -60,7 +60,7 @@
     </style>
 
     <div class="form-container">
-        <h2>Create New Product</h2>
+        <h2>Update Product</h2>
 
         <form action="{{ route('product.update',$product->id) }}" method="POST" enctype="multipart/form-data">
             @csrf

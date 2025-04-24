@@ -12,4 +12,10 @@ class OrderController extends Controller
         $orders = Order::latest()->paginate();
         return view('admin.orders',compact('orders'));
     }
+    public function updateStatus(Request $request,$id){
+        $order = Order::find($id);
+        $order->status = $request->status;
+        $order->save();
+        return redirect()->route('order.index');
+    }
 }

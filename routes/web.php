@@ -14,6 +14,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/users', [\App\Http\Controllers\AdminController::class, 'users'])->name('users.index');
     Route::get('/orders', [\App\Http\Controllers\OrderController::class, 'index'])->name('order.index');
+    Route::post('/orders/{id}', [\App\Http\Controllers\OrderController::class, 'updateStatus'])->name('order.update-status');
     Route::get('/products', [\App\Http\Controllers\ProductController::class, 'index'])->name('product.index');
     Route::get('/doctor/dashboard', [\App\Http\Controllers\DoctorController::class, 'index'])->name('doctor.dashboard');
     Route::get('/doctor/chat/{id}', [\App\Http\Controllers\DoctorController::class, 'chat'])->name('chat');

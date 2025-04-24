@@ -3,8 +3,7 @@
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="mb-4" style="font-size: 2rem;font-weight: bold">Order Management</h2>
-            <a href="{{route('product.create')}}" class="btn btn-primary">New Product</a>
-        </div>
+            </div>
 
         <div class="table-responsive">
             <table class="table table-bordered align-middle text-center">
@@ -25,6 +24,15 @@
                         <td>PKR {{ $order->total }}</td>
                         <td class="col-6 text-truncate">{{ $order->created_at->format('H:i d/m/y')}}</td>
                         <td>
+                            <form action="{{route('order.update-status',$order->id)}}" method="post">
+                                @csrf
+                                <select name="status" class="form-select px-2 mx-2 w-auto d-inline py-2 rounded" onchange="this.form.submit()">
+                                    <option value="pending" {{$order->status=='pending' ? 'selected' :''}}>Pending</option>
+                                    <option value="processing" {{$order->status=='processing' ? 'selected' :''}}>Processing</option>
+                                    <option value="completed" {{$order->status=='completed' ? 'selected' :''}}>Delivered</option>
+                                    <option value="cancel" {{$order->status=='cancel' ? 'selected' :''}}>Cancelled</option>
+                                </select>
+                            </form>
                         </td>
                     </tr>
                 @empty
