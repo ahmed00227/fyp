@@ -42,6 +42,7 @@ const Login = () => {
                 // Save the real token from the backend
                 localStorage.setItem('authToken', data.token);
                 localStorage.setItem('count',data.cart_count);
+                localStorage.setItem('userId',data.user.id);
                 toast.success("Login successful! Redirecting...");
                 setTimeout(() => {
                     navigate('/Home');

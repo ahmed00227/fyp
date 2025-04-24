@@ -18,7 +18,7 @@ class ChatBotController extends Controller
     }
     public function descriptions(Request $request){
         return   Http::get(config('services.chatbot.descriptions'), [
-            'name' => $request->name,
+            'message' => $request->message,
         ]);
     }
 }

@@ -15,6 +15,7 @@ const Home = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
+    localStorage.removeItem('userId');
     setIsLoggedIn(false);
     toast.success("Logout Successful!");
       navigate('/Login');
