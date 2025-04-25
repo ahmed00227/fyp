@@ -1,10 +1,10 @@
-/* 
+/*
 
 .logo{
     display: flex;
     justify-content: left;
     align-items: center;
-   
+
 }
 
 #menus{
@@ -12,7 +12,7 @@
     list-style: none;
     padding: 20px;
     align-items: center;
-    cursor: pointer; 
+    cursor: pointer;
     font-weight: 500;
 }
 #menus li a{
@@ -22,7 +22,7 @@
 }
 #menus a:hover{
     color: burlywood;
-   
+
 }
 #menus button{
    margin-top: 20px;
@@ -41,77 +41,92 @@
    width: 20%;
    margin-bottom: 100px;
    display: flex;
-   align-items: center; 
-   justify-content: center;  
+   align-items: center;
+   justify-content: center;
   }
-  
- */ 
+
+ */
+
  *{
     margin: 0px;
     padding: 0px;
-  
+
 }
 header{
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
    padding: 0;
    margin-bottom: 0%;
 }
+.menus {
+   padding-top: 0%;
+}
 
 .menus li{
-   
+
     list-style: none;
    float:left;
     cursor: pointer;
-   
-    border: none; 
+
+    border: none;
     padding: 12px;
     display: flex;
-    align-items: center;
-    margin: 20px;
+    /* align-items: center; */
+   padding-right: 50px;
     margin-top: 0px;
-   
-    
- 
+    padding-top: 0%;
+
+
+
 }
 .menus li a{
- 
+
    color: darkblue;
    text-decoration: none;
-   
+
 }
 .menus ul li a:hover{
     color: rgb(131, 96, 7);
     border-bottom: 1px solid darkblue;
-   
-  
+
+
+}
+.search-sec{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 0%;
 }
 #search{
 
     padding: 1px;
     border-color: none;
     border-radius: 5px;
-    width: 100%;
-    padding-left: 5px;
+    width:190%;
+    padding-left: 10px;
+
 }
-.search-bar{
-  
+/* .search-bar{
+
     display: flex;
     align-items: center;
-  
-}
-.search-bar i{
+    justify-content: space-between;
 
- margin-left: 20px;
+} */
+.login-btn i{
+
+ margin-right: 10px;
  font-size: larger;
 }
 .search-bar input{
+
     border-style: none;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.283);
-    
+
 }
+
 .login-btn button{
     background-color: rgb(18, 168, 227);
     color: #fff;
@@ -126,17 +141,20 @@ header{
     display: flex;
     justify-content: left;
     align-items: center;
+    margin-bottom: 0%;
 }
 #home-cont{
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    background-image: linear-gradient(to bottom right, rgb(138, 221, 252)
+    , rgb(178, 239, 251));
    position: fixed;
    top: 0;
-   
+
  width: 100%;
 z-index:1;
 }
 /* .hero {
-   
+
 } */
  .section{
     background: url('../images/cap.png') no-repeat center center/cover;
@@ -150,9 +168,9 @@ z-index:1;
     height:550px;
     padding: 0;
     position: relative;
- } 
- 
- 
+ }
+
+
  .high-stan h1{
     padding-top: 10px;
   color:#fff;
@@ -180,31 +198,31 @@ color: #150101;
 #shop-now{
     background-color:rgb(9, 48, 53) ;
     color: #fff;
-    
+
 }
 #shop-now:hover{
     background-color:rgb(1, 21, 23) ;
 }
- .service h2{
-    text-transform: capitalize;
-    color: rgb(61, 111, 127);
-   
- }
- .service i{
-    margin-top: 60px;
-    font-size: 80px;
-    margin-bottom: 30px;
+     .service h2{
+        text-transform: capitalize;
+        color: rgb(61, 111, 127);
 
- }
- .service{
-    text-align: center;
-    color: rgb(1, 21, 23);
- }
- .service p{
-    margin-bottom: 60px;
-    color: #150101;
-    margin-top: 20px;
- }
+     }
+     .service i{
+        margin-top: 60px;
+        font-size: 80px;
+        margin-bottom: 30px;
+
+     }
+     .service{
+        text-align: center;
+        color: rgb(1, 21, 23);
+     }
+     .service p{
+        margin-bottom: 60px;
+        color: #150101;
+        margin-top: 20px;
+     }
  .discount{
     background: url('../images/discount.png') no-repeat center center/cover;
     color: rgb(255, 255, 255);
@@ -240,11 +258,11 @@ margin: auto;
   .card img{
    width: 100%;
    height: 400px;
-   
+
    box-shadow:  8px 8px 15px rgba(0, 0, 0, 0.284);
   display: block;
   border:none;
-  
+
   }
   .card-area{
     padding-top: 70px;
@@ -252,7 +270,7 @@ margin: auto;
     , rgb(231, 231, 223));
 
     padding-bottom: 70px;
-   
+
   }
  .overlay{
     height: 0;
@@ -296,23 +314,19 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
     text-transform: capitalize;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.157);
  }
- form{
-  border: 3px solid red;
 
-  background-color:rgba(204, 223, 222, 0.657);
- }
  .login-bg{
    margin: auto;
   /* width: 55%;
    padding: 50px; */
    text-align: center;
-   
+
  }
  .login-bg h2{
    text-align: center;
  }
  .login{
-   background: url('../images/login-img.jpeg') no-repeat center center/cover;
+
    color: rgb(255, 255, 255);
    text-align: left;
    display: flex;
@@ -324,5 +338,436 @@ text-shadow:2px 2px rgba(0, 0, 0, 0.446);
    padding: 0;
  }
 
- 
+ .login-back{
+   background-color: rgba(4, 26, 43, 0.684);
+   padding: 55px;
+ }
+ .login-back h2{
+   color: white;
+   margin-bottom: 30px;
+ }
+ .login-back label{
+    margin-bottom: 10px;
+ }
+  .login-back input{
+    margin-bottom: 1px;
+    border-style: none;
+    width: 100%;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.186);
+    border-radius: 5px;
+
+ }
+ input[type=text]{
+   padding: 5px;
+ }
+ input[type=password]{
+   padding: 5px;
+ }
+ .login-back input[type=submit]{
+   margin: auto;
+   width: 100%;
+   padding: 10px;
+   background-color: rgb(42, 157, 203);
+   color: #fff;
+   margin-top: 30px;
+   margin-bottom: 10px;
+   box-shadow: 2px 2px rgba(0, 0, 0, 0.186);
+}
+.login-back input[type=submit]:hover{
+
+   background-color: rgb(4, 91, 126);
+   color: #fff;
+}
+.login-back a{
+
+   color: rgb(136, 212, 236);
+   text-decoration: none;
+}
+.login-back p{
+   color: rgb(206, 217, 220);
+}
+.login-back a:hover{
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+ .login-pg{
+   background: url('../images/login2-picaai.png') no-repeat center center/cover;
+   min-height: 100vh;
+ }
+
+#email-error,#pass-error{
+   color:rgb(232, 38, 38);
+   margin-bottom: 10px;
+   font-size: smaller;
+   display: none;
+}
+                              /*...... chatbot .....*/
+.chatbot{
+   background: url('../images/chatbot_enhanced.jpg') no-repeat center center/cover;
+   min-height: 100vh;
+
+}
+.chatbot-head{
+   margin-top: 200px;
+   text-transform: capitalize;
+}
+.chatbot-head h1{
+   color: #fff;
+   margin-bottom: 5px
+}
+.chatbot-head h2{
+   color: #46aed7;
+   margin-bottom: 20px;
+}
+.chatbot-head p{
+   color: #fcfeff;
+   font-weight: 400;
+}
+.chatbot-mode button{
+  background-color:  #46aed7a1;
+  color: #fff;
+  margin: 5px;
+  box-shadow:  8px 8px 15px rgba(0, 0, 0, 0.284);
+}
+.chatbot-mode button:hover{
+   background-color:  #25576aa1;
+   color: #fff;
+}
+                      /* ...description mode.... */
+.des_mode_bg{
+   background-image: linear-gradient(to bottom right, rgb(174, 206, 238)
+    , rgb(211, 182, 227));
+    min-height: 100vh;
+}
+.chatbox{
+   background-image: linear-gradient(to bottom right, rgb(255, 255, 255)
+    , rgb(211, 182, 227));
+   bottom: 10px;
+   position: fixed;
+   right: 30%;
+   border-radius: 20px;
+   width: 450px;
+   bottom: 15px;
+
+   overflow: hidden;
+   box-shadow:  8px 8px 15px rgba(0, 0, 0, 0.284);
+
+}
+.chatbox h2{
+   background-color: rgb(141, 8, 141);
+   color: #fff;
+   text-align: center;
+   padding: 10px;
+   text-transform: uppercase;
+}
+.chatbox .chatbox-body{
+   height: 400px;
+   overflow-y: auto;
+   padding: 15px 20px 70px;
+}
+.chatbox-body .chat{
+   display: flex;
+}
+.chatbox-body .chat p{
+   background-color: purple;
+   color: #fff;
+   border-radius: 5px;
+   padding: 8px 15px;
+   font-size: 0.95rem;
+   max-width: 75%;
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+}
+.chatbox-body .incoming p{
+   background-color: rgb(211, 193, 211);
+   color: black;
+   border-radius: 5px;
+   padding: 8px 15px;
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+}
+.chatbox-body .outgoing{
+   justify-content: flex-end;
+
+}
+.chatbox-body .incoming i{
+   height: 32px;
+   width: 32px;
+   color: #fff;
+   background-color: purple;
+   line-height: 32px;
+   text-align: center;
+   border-radius: 4px;
+   align-self: flex-end;
+   margin: 0px 7px 30px 0;
+}
+.chat-input{
+   display: flex;
+   gap: 5px;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background-color: #fff;
+  padding: 5px 20px;
+  border-top:1px solid black;
+}
+.chat-input textarea{
+   height: 55px;
+   width: 100%;
+   border: none;
+   outline: none;
+   font-size: 0.95rem;
+   resize: none;
+   padding: 16px 15px 16px 0;
+}
+.chat-input i{
+   font-size: 0.95rem;
+   align-self: flex-end;
+   cursor: pointer;
+   line-height: 55px;
+   height: 55px;
+
+}
+                       /* .....about.....*/
+
+ .about{
+   background-image: linear-gradient(to bottom right, rgb(119, 196, 235)
+   , rgb(231, 231, 223));
+ }
+.about_sec{
+   margin-top: 150px;
+}
+.about_sec h1{
+text-align: center;
+margin-bottom: 20px;
+color: #296e7b;
+text-transform: capitalize;
+text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.63);
+}
+.about_sec p{
+   font-size: 1.2rem;
+   line-height: 2rem;
+}
+.about_sec b{
+   color: #296e7b;
+   font-weight: 300;
+}
+.about_sec img{
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+}
+.trust_us h1{
+   text-transform: capitalize;
+   text-align: center;
+   margin-top: 40px;
+   color: #296e7b;
+   text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.835);
+
+}
+.about_trust i{
+ font-size: 3rem;
+ margin-top: 20px;
+ margin-bottom: 10px;
+ text-shadow:  6px 6px 15px rgba(29, 26, 26, 0.284);
+
+}
+.about_trust h3{
+   font-size: 1.3rem;
+color: #296e7b;
+
+  }
+  .about_trust p{
+   font-size: 1.1rem;
+  }
+.about_trust{
+   text-align: center;
+   border: none;
+
+   margin: auto;
+   height: 220px;
+padding: 30px;
+}
+
+.commitment {
+   margin-top: 40px;
+
+}
+.commitment b{
+   color:#296e7b;
+   font-weight: 300;
+}
+.commitment span{
+   font-size: 1.1rem;
+   line-height: 2rem;
+}
+.commitment i{
+   font-size: 1.5rem;
+   margin-right: 10px;
+}
+.commitment h1{
+   text-align: center;
+   text-transform: capitalize;
+   margin-bottom: 40px;
+   color: #296e7b;
+   text-shadow:  3px 3px 10px rgba(255, 255, 255, 0.835);
+}
+.commitment img{
+   box-shadow:  6px 6px 15px rgba(0, 0, 0, 0.284);
+   margin-bottom: 20px;
+}
+
+
+                   /*......... media queries........... */
+
+
+
+@media (max-width:1198px){
+   .menus li{
+      padding-top: 0%;
+      padding-left: 20px;
+      margin-top: 5px;
+   }
+   #search{
+      padding-left: 10px;
+   }
+   .service h2{
+      font-size: 25px;
+   }
+
+}
+@media (max-width:990px){
+   .logo h2 span{
+      font-size: 30px;
+     }
+     .logo img{
+       height: 50px;
+       width: 50px;
+     }
+     #search{
+
+     width: 150%;
+  }
+  /* .menus li{
+   display: flex;
+   align-items: center;
+justify-content: center;
+  } */
+
+.menus{
+   display: flex;
+
+   justify-content: center;
+   align-items: center;
+ width: 100%;
+padding-left: 20px;
+
+}
+header{
+ padding-top: 0%;
+ padding-bottom: 10px;
+}
+/* .menus li{
+
+   float: left;
+   margin: 2px;
+   padding:10px;
+   display: flex;
+   justify-content: center;
+} */
+.high-stan h1 {
+   text-align: center;
+   margin-bottom: 10px;
+}
+.high-stan h4{
+   text-align: center;
+   font-size: 20px;
+}
+.header-btn{
+text-align: center;
+margin-bottom: 0%;
+}
+.card{
+   margin-bottom: 30px;
+}
+.service i{
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+.service p{
+   margin-bottom: 10px;
+
+}
+}
+@media (max-width:768px){
+
+  .logo h2 span{
+   font-size: 20px;
+  }
+  .logo img{
+    height: 50px;
+    width: 50px;
+  }
+  #search{
+width: 180%;
+margin-left: 0%
+}
+
+.login-btn i{
+
+   margin-right: 10px;
+   font-size: 18px;
+   margin-left: 10px;
+  }
+  .login-btn button{
+   font-size: x-small;
+  }
+  .login-btn{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+  }
+  header{
+   padding-top: 0%;
+   padding-bottom: 0%;
+  }
+  #search{
+    width: 100%;
+   font-size: small;
+   padding: 5px;
+  }
+  .menus li{
+   padding-left: 10px;
+  }
+  /* .chatbox h1{
+   text-transform: lowercase;
+ } */
+
+
+}
+@media (max-width:458px){
+   .menus li{
+      padding-left: 0px;
+   }
+   .login-pg{
+      margin-bottom: 0%;
+   }
+   .login{
+      margin-bottom: 0%;
+   }
+   /* .chatbox{
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0%;
+   }
+   .chatbox-body{
+      height: 90%;
+   } */
+
+
+
+}
+
+
+                 /* login page */
+
 

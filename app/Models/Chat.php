@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chat extends Model
 {
+    const specialists = [
+        'Dermatologist'       => 'Skin',
+        'General Physician'   => 'Medical',
+        'Pediatrician'        => 'Child',
+        'Nephrologist'        => 'Kidney',
+        'Dentist'             => 'Dentist',
+        'Cardiologist'        => 'Heart',
+    ];
     protected $guarded=[];
     public function messages(){
         return $this->hasMany(Message::class);

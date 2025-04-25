@@ -34,5 +34,22 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'chatbot' => [
+        'descriptions' => env('DESCRIPTION_API'),
+        'recommendations' => env('RECOMMENDATION_API')
+    ],
+     'pusher' => [
+    'driver' => 'pusher',
+    'key' => env('PUSHER_APP_KEY'),
+    'secret' => env('PUSHER_APP_SECRET'),
+    'app_id' => env('PUSHER_APP_ID'),
+    'options' => [
+        'cluster' => 'ap2',
+        'useTLS' => true,
+    ],
+    'client_options' => [
+        // Guzzle client options: https://docs.guzzlephp.org/en/stable/request-options.html
+    ],
+],
 
 ];
