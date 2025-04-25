@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import Pusher from 'pusher-js';
-import {toast} from "react-toastify";
+import { toast, ToastContainer } from 'react-toastify';
 
 const ChatCanvas = () => {
     const [loading, setLoading] = useState(false);
@@ -149,7 +149,9 @@ const ChatCanvas = () => {
     };
 
     return (
-        <div
+        <>
+            <ToastContainer/>
+            <div
             className="container col-md-5 mt-5 pt-5 col-12 d-flex flex-column p-4 rounded"
             style={{ height: '80vh' }}
         >
@@ -206,6 +208,7 @@ const ChatCanvas = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

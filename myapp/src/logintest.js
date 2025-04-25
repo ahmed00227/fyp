@@ -73,7 +73,7 @@ const Login = () => {
                             </label>
                             <input
                                 type="text"
-                                className="form-control"
+                                className="form-control bg-white text-black"
                                 id="username"
                                 required
                                 value={email}

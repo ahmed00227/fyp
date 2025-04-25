@@ -118,7 +118,7 @@ function Whole() {
                             <div className="input-group mt-4">
                                 <input
                                     type="text"
-                                    className="form-control form-control-lg rounded-2 shadow-sm border-0"
+                                    className="form-control bg-white text-black form-control-lg rounded-2 shadow-sm border-0"
                                     placeholder="Search for a product..."
                                     value={searchProduct}
                                     onChange={(e) => {
@@ -180,7 +180,7 @@ function Whole() {
                         </div>
                     ))}
                     {filteredProducts.length === 0 && !loading && (
-                        <div className="text-center text-muted fs-4 fw-bold mt-5">No Products Found</div>
+                        <div className="text-center text-muted fs-4 fw-bold mt-5 mb-5">No Products Found</div>
                     )}
                 </div>
 
