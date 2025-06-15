@@ -13,14 +13,14 @@ class AuthController extends Controller
     }
     public function login(LoginRequest $request){
         if(auth()->attempt(['email' => $request->email, 'password' => $request->password])){
-            $user = auth()->user();
-            if($user->role == 'admin'){
+            $role = auth()->user()->role;
+            if($role == 'admin'){
                 return redirect()->route('admin.dashboard');
-            }elseif($user->role=='doctor'){
+            }elseif($role=='doctor'){
                 return redirect()->route('doctor.dashboard');
             }
+            auth()->logout();
         }
-        auth()->logout();
         return redirect()->route('login')->with('error','Invalid Credentials');
     }
     public function logout(){
