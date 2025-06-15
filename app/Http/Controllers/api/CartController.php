@@ -6,93 +6,69 @@ use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Product;
+use App\Services\ApiResponseModifier;
+use App\Services\CartService;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
+    private ApiResponseModifier $modifier;
+    private CartService $cartService;
+    public function __construct( ApiResponseModifier $modifier, CartService $cartService)
+    {
+        $this->modifier = $modifier;
+        $this->cartService = $cartService;
+    }
     public function cartList(){
-        $cart = Cart::where('user_id',auth()->id())->with('product')->paginate();
-        return response()->json([
-            'success' => true,
-            'cart_count' => Cart::where('user_id',auth()->id())->count(),
-            'carts' => $cart->items(), // actual product data
-            'pagination' => [
-                'current_page' => $cart->currentPage(),
-                'last_page'    => $cart->lastPage(),
-                'per_page'     => $cart->perPage(),
-                'total'        => $cart->total(),
-                'next_page_url'=> $cart->nextPageUrl(),
-                'prev_page_url'=> $cart->previousPageUrl(),
-            ]
-        ]);
+        return $this->modifier->setData($this->cartService->cartList())->response();
     }
     public function addToCart(Request $request)
     {
-        $product = Product::find($request->product_id);
-        $cart = auth()->user()->carts()->firstOrNew([
-        'product_id' => $product->id,
-    ]);
-        if ($cart->exists) {
-            $cart->quantity += 1;
-        } else {
-            $cart->quantity = 1;
+        $cart = $this->cartService->addToCart($request);
+        if($cart){
+            return $this->cartList();
+        }else{
+            return $this->modifier->setMessage('Cart not added')->setResponseCode(422)->response();
         }
-        $cart->save();
-        return $this->cartList();
     }
 
     public function removeFromCart(Request $request,$id)
     {
-        auth()->user()->carts()->where('id', $id)->delete();
-        return $this->cartList();
+        $removal =$this->cartService->removeFromCart($id);
+        if($removal){
+            return $this->cartList();
+        }else{
+            return $this->modifier->setMessage('Error On Removing From Cart')->setResponseCode(422)->response();
+        }
     }
 
     public function emptyCart()
     {
-        auth()->user()->carts()->delete();
-        return response()->json([
-            'success' => true,
-            'message' => 'Your cart is empty.'
-        ]);
+        $empty= $this->cartService->emptyCart();
+        if($empty){
+            return $this->modifier->setMessage('Your cart is empty')->response();
+        }else{
+            return $this->modifier->setMessage('Unable to Empty the cart')->setResponseCode(422)->response();
+        }
     }
 
     public function updateCart(Request $request,$id)
     {
-        auth()->user()->carts()->updateOrCreate([
-            'id' => $id
-        ], [
-            'quantity' => $request->quantity ?? 1,
-        ]);
-        return response()->json([
-            'success' => true,
-            'message' => 'Cart Updated successfully.'
-        ]);
+        $update =$this->cartService->updateCart($request,$id);
+        if($update){
+            return $this->modifier->setMessage('Cart Updated')->response();
+        }else{
+            return $this->modifier->setMessage('Error Updating Cart')->setResponseCode(422)->response();
+        }
     }
 
     public function checkout(Request $request)
     {
-
-        $items = auth()->user()->carts()->get();
-        $sum = 0;
-
-        foreach ($items as $item) {
-            $sum += $item->quantity * $item->product->price;
+        $checkout =$this->cartService->checkout($request);
+        if($checkout){
+            return $this->modifier->setMessage('Order placed successfully')->response();
+        }else{
+            return $this->modifier->setMessage('Unable To Checkout')->setResponseCode(422)->response();
         }
-        $order=Order::create([
-            'user_id' => auth()->id(),
-            'total' => $sum,
-            'receiver_name' => $request->name,
-            'receiver_phone' => $request->phone,
-            'delivery_address' => $request->address,
-        ]);
-        foreach ($items as $item) {
-            $order->products()->attach($item->id, ['quantity' => $item->quantity]);
-        }
-        auth()->user()->carts()->delete();
-        return response()->json([
-            'success' => true,
-            'cart_count' => Cart::where('user_id',auth()->id())->count(),
-            'message' => 'Order placed successfully.'
-        ]);
     }
 }

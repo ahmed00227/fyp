@@ -25,6 +25,5 @@ class AdminController extends Controller
     {
         $users = User::where('role','user')->paginate();
         return view('admin.users',compact('users'));
-
     }
 }

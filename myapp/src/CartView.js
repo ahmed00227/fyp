@@ -41,15 +41,13 @@ const CartView = () => {
             }
 
             const data = await response.json();
-            console.log('Cart API response:', data); // Debug API response
-            if (data.cart_count !== undefined) {
+            if (data.response.cart_count !== undefined) {
                 localStorage.setItem('count', data.cart_count);
             } else {
                 console.warn('cart_count missing in API response');
             }
             setCartProducts(data.carts || []);
         } catch (error) {
-            console.error('Error fetching cart:', error);
             setError('Failed to load cart. Please try again later.');
             toast.error('Failed to load cart.', {
                 toastId: 'fetch-error',
